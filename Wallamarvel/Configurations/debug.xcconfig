@@ -1,0 +1,11 @@
+//
+//  debug.xcconfig
+//  Wallamarvel
+//
+//  Created by Juanjo García Villaescusa on 03/11/2020.
+//
+
+#include "Pods/Target Support Files/Pods-Wallamarvel/Pods-Wallamarvel.debug.xcconfig"
+
+MARVEL_PRIVATE_KEY = ba8e9288cfcca8bffb14c108fe783a2166902990
+MARVEL_PUBLIC_KEY = e375969cb69e3ac29001d2d273d67db8
