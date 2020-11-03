@@ -9,7 +9,13 @@ target 'Wallamarvel' do
   pod 'RxSwift', '~> 5.1.0'
   pod 'RxCocoa', '~> 5.1.0'
   pod 'SlimGateway', '~> 2.0.0'
+  
 
+  target 'API' do
+    inherit! :search_paths
+    pod 'CryptoSwift', '~> 1.3.0'
+  end
+  
   target 'WallamarvelTests' do
     inherit! :search_paths
     # Pods for testing

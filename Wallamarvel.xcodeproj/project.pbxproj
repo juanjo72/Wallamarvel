@@ -15,7 +15,28 @@
 		81A20DB12551054E003BBEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A20DB02551054E003BBEBC /* Assets.xcassets */; };
 		81A20DB42551054E003BBEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A20DB22551054E003BBEBC /* LaunchScreen.storyboard */; };
 		81A20DBF2551054E003BBEBC /* WallamarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20DBE2551054E003BBEBC /* WallamarvelTests.swift */; };
+		81E99B1125510AF400FF0015 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B0825510AF400FF0015 /* API.framework */; };
+		81E99B1825510AF500FF0015 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B1725510AF500FF0015 /* APITests.swift */; };
+		81E99B1A25510AF500FF0015 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E99B0A25510AF400FF0015 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E99B1D25510AF500FF0015 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B0825510AF400FF0015 /* API.framework */; };
+		81E99B1E25510AF500FF0015 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B0825510AF400FF0015 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81E99B2E25510B8100FF0015 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B2D25510B8100FF0015 /* API.swift */; };
+		81E99B3625510BB000FF0015 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B3525510BB000FF0015 /* APIError.swift */; };
+		81E99B3B25510C0700FF0015 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B3A25510C0700FF0015 /* Resource.swift */; };
+		81E99B4125510E7100FF0015 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B4025510E7100FF0015 /* App.swift */; };
+		81E99B462551102D00FF0015 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B452551102D00FF0015 /* ViewControllerFactory.swift */; };
+		81E99B4D255112F600FF0015 /* LandingControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */; };
+		81E99B6A2551172A00FF0015 /* API+searchHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B692551172A00FF0015 /* API+searchHeroes.swift */; };
+		81E99B6F25511F8600FF0015 /* SlimGateway+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B6E25511F8600FF0015 /* SlimGateway+API.swift */; };
+		81E99B7425512DDE00FF0015 /* EndPointResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B7325512DDE00FF0015 /* EndPointResults.swift */; };
+		81E99B8625512E0800FF0015 /* WallamarvelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */; };
+		81E99B8D25512E0800FF0015 /* WallamarvelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B8C25512E0800FF0015 /* WallamarvelKitTests.swift */; };
+		81E99B8F25512E0800FF0015 /* WallamarvelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E99B7F25512E0800FF0015 /* WallamarvelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E99B9225512E0800FF0015 /* WallamarvelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */; };
+		81E99B9325512E0800FF0015 /* WallamarvelKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81E99BA025512E1C00FF0015 /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B9F25512E1C00FF0015 /* Heroe.swift */; };
 		982D0221A4FEA43CFF9C8909 /* Pods_WallamarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139A6DF7910394B29E9CCCAC /* Pods_WallamarvelTests.framework */; };
+		E658B7E9233F4A125EA6BA45 /* Pods_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E20231184E04CAA6F93497 /* Pods_API.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,13 +47,72 @@
 			remoteGlobalIDString = 81A20DA32551054C003BBEBC;
 			remoteInfo = Wallamarvel;
 		};
+		81E99B1225510AF400FF0015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A20D9C2551054C003BBEBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81E99B0725510AF400FF0015;
+			remoteInfo = API;
+		};
+		81E99B1425510AF400FF0015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A20D9C2551054C003BBEBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81A20DA32551054C003BBEBC;
+			remoteInfo = Wallamarvel;
+		};
+		81E99B1B25510AF500FF0015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A20D9C2551054C003BBEBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81E99B0725510AF400FF0015;
+			remoteInfo = API;
+		};
+		81E99B8725512E0800FF0015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A20D9C2551054C003BBEBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81E99B7C25512E0800FF0015;
+			remoteInfo = WallamarvelKit;
+		};
+		81E99B8925512E0800FF0015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A20D9C2551054C003BBEBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81A20DA32551054C003BBEBC;
+			remoteInfo = Wallamarvel;
+		};
+		81E99B9025512E0800FF0015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A20D9C2551054C003BBEBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81E99B7C25512E0800FF0015;
+			remoteInfo = WallamarvelKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81E99B2225510AF500FF0015 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				81E99B9325512E0800FF0015 /* WallamarvelKit.framework in Embed Frameworks */,
+				81E99B1E25510AF500FF0015 /* API.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		139A6DF7910394B29E9CCCAC /* Pods_WallamarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallamarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21715E27732712EFE39580DA /* Pods-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API.debug.xcconfig"; path = "Target Support Files/Pods-API/Pods-API.debug.xcconfig"; sourceTree = "<group>"; };
 		3821824329DC269B2A0E8E19 /* Pods-Wallamarvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallamarvel.debug.xcconfig"; path = "Target Support Files/Pods-Wallamarvel/Pods-Wallamarvel.debug.xcconfig"; sourceTree = "<group>"; };
 		453E351757AB1101F207762E /* Pods_Wallamarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallamarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6834F9339747E09663ACE6BB /* Pods-WallamarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallamarvelTests.release.xcconfig"; path = "Target Support Files/Pods-WallamarvelTests/Pods-WallamarvelTests.release.xcconfig"; sourceTree = "<group>"; };
+		69E20231184E04CAA6F93497 /* Pods_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A20DA42551054C003BBEBC /* Wallamarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallamarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A20DA72551054C003BBEBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A20DA92551054C003BBEBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +126,29 @@
 		81A20DC02551054E003BBEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E99AFD255107D400FF0015 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		81E99AFE255107E500FF0015 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		81E99B0825510AF400FF0015 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E99B0A25510AF400FF0015 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		81E99B0B25510AF400FF0015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E99B1025510AF400FF0015 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E99B1725510AF500FF0015 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		81E99B1925510AF500FF0015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E99B2D25510B8100FF0015 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		81E99B3525510BB000FF0015 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		81E99B3A25510C0700FF0015 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		81E99B4025510E7100FF0015 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		81E99B452551102D00FF0015 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerFactory.swift; sourceTree = "<group>"; };
+		81E99B692551172A00FF0015 /* API+searchHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+searchHeroes.swift"; sourceTree = "<group>"; };
+		81E99B6E25511F8600FF0015 /* SlimGateway+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SlimGateway+API.swift"; sourceTree = "<group>"; };
+		81E99B7325512DDE00FF0015 /* EndPointResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointResults.swift; sourceTree = "<group>"; };
+		81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WallamarvelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E99B7F25512E0800FF0015 /* WallamarvelKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WallamarvelKit.h; sourceTree = "<group>"; };
+		81E99B8025512E0800FF0015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E99B8525512E0800FF0015 /* WallamarvelKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallamarvelKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E99B8C25512E0800FF0015 /* WallamarvelKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallamarvelKitTests.swift; sourceTree = "<group>"; };
+		81E99B8E25512E0800FF0015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E99B9F25512E1C00FF0015 /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
+		AF3D9ED4A82E983C935BA1D6 /* Pods-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API.release.xcconfig"; path = "Target Support Files/Pods-API/Pods-API.release.xcconfig"; sourceTree = "<group>"; };
 		B90F59BC738F982C430DE8FF /* Pods-Wallamarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallamarvel.release.xcconfig"; path = "Target Support Files/Pods-Wallamarvel/Pods-Wallamarvel.release.xcconfig"; sourceTree = "<group>"; };
 		FD73AC7D72E0350E0CB3B146 /* Pods-WallamarvelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallamarvelTests.debug.xcconfig"; path = "Target Support Files/Pods-WallamarvelTests/Pods-WallamarvelTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +158,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E99B9225512E0800FF0015 /* WallamarvelKit.framework in Frameworks */,
 				0EBEE75579324084341D2A61 /* Pods_Wallamarvel.framework in Frameworks */,
+				81E99B1D25510AF500FF0015 /* API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +169,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				982D0221A4FEA43CFF9C8909 /* Pods_WallamarvelTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B0525510AF400FF0015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E658B7E9233F4A125EA6BA45 /* Pods_API.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B0D25510AF400FF0015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B1125510AF400FF0015 /* API.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B7A25512E0800FF0015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B8225512E0800FF0015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B8625512E0800FF0015 /* WallamarvelKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +213,8 @@
 				B90F59BC738F982C430DE8FF /* Pods-Wallamarvel.release.xcconfig */,
 				FD73AC7D72E0350E0CB3B146 /* Pods-WallamarvelTests.debug.xcconfig */,
 				6834F9339747E09663ACE6BB /* Pods-WallamarvelTests.release.xcconfig */,
+				21715E27732712EFE39580DA /* Pods-API.debug.xcconfig */,
+				AF3D9ED4A82E983C935BA1D6 /* Pods-API.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -86,6 +224,10 @@
 			children = (
 				81A20DA62551054C003BBEBC /* Wallamarvel */,
 				81A20DBD2551054E003BBEBC /* WallamarvelTests */,
+				81E99B0925510AF400FF0015 /* API */,
+				81E99B1625510AF500FF0015 /* APITests */,
+				81E99B7E25512E0800FF0015 /* WallamarvelKit */,
+				81E99B8B25512E0800FF0015 /* WallamarvelKitTests */,
 				81A20DA52551054C003BBEBC /* Products */,
 				6FAE05E2CBA5DA2E110056CB /* Pods */,
 				DAABB3F33E4C43ADE84F721F /* Frameworks */,
@@ -97,6 +239,10 @@
 			children = (
 				81A20DA42551054C003BBEBC /* Wallamarvel.app */,
 				81A20DBA2551054E003BBEBC /* WallamarvelTests.xctest */,
+				81E99B0825510AF400FF0015 /* API.framework */,
+				81E99B1025510AF400FF0015 /* APITests.xctest */,
+				81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */,
+				81E99B8525512E0800FF0015 /* WallamarvelKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				81A20DA72551054C003BBEBC /* AppDelegate.swift */,
+				81E99B3F25510E6200FF0015 /* App */,
+				81E99B4A255112C400FF0015 /* Screens */,
 				81A20DA92551054C003BBEBC /* SceneDelegate.swift */,
 				81A20DAB2551054C003BBEBC /* ViewController.swift */,
 				81E99AFC255107B200FF0015 /* Configurations */,
@@ -134,16 +282,104 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		81E99B0925510AF400FF0015 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B2D25510B8100FF0015 /* API.swift */,
+				81E99B692551172A00FF0015 /* API+searchHeroes.swift */,
+				81E99B3525510BB000FF0015 /* APIError.swift */,
+				81E99B7325512DDE00FF0015 /* EndPointResults.swift */,
+				81E99B3A25510C0700FF0015 /* Resource.swift */,
+				81E99B0A25510AF400FF0015 /* API.h */,
+				81E99B0B25510AF400FF0015 /* Info.plist */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		81E99B1625510AF500FF0015 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B1725510AF500FF0015 /* APITests.swift */,
+				81E99B1925510AF500FF0015 /* Info.plist */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
+		81E99B3F25510E6200FF0015 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B4025510E7100FF0015 /* App.swift */,
+				81E99B6E25511F8600FF0015 /* SlimGateway+API.swift */,
+				81E99B452551102D00FF0015 /* ViewControllerFactory.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		81E99B4A255112C400FF0015 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B4B255112DA00FF0015 /* Landing */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		81E99B4B255112DA00FF0015 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		81E99B7E25512E0800FF0015 /* WallamarvelKit */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B9F25512E1C00FF0015 /* Heroe.swift */,
+				81E99B7F25512E0800FF0015 /* WallamarvelKit.h */,
+				81E99B8025512E0800FF0015 /* Info.plist */,
+			);
+			path = WallamarvelKit;
+			sourceTree = "<group>";
+		};
+		81E99B8B25512E0800FF0015 /* WallamarvelKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				81E99B8C25512E0800FF0015 /* WallamarvelKitTests.swift */,
+				81E99B8E25512E0800FF0015 /* Info.plist */,
+			);
+			path = WallamarvelKitTests;
+			sourceTree = "<group>";
+		};
 		DAABB3F33E4C43ADE84F721F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				453E351757AB1101F207762E /* Pods_Wallamarvel.framework */,
 				139A6DF7910394B29E9CCCAC /* Pods_WallamarvelTests.framework */,
+				69E20231184E04CAA6F93497 /* Pods_API.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		81E99B0325510AF400FF0015 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B1A25510AF500FF0015 /* API.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B7825512E0800FF0015 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B8F25512E0800FF0015 /* WallamarvelKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		81A20DA32551054C003BBEBC /* Wallamarvel */ = {
@@ -155,10 +391,13 @@
 				81A20DA12551054C003BBEBC /* Frameworks */,
 				81A20DA22551054C003BBEBC /* Resources */,
 				7C5951AB73E53E85D6845867 /* [CP] Embed Pods Frameworks */,
+				81E99B2225510AF500FF0015 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				81E99B1C25510AF500FF0015 /* PBXTargetDependency */,
+				81E99B9125512E0800FF0015 /* PBXTargetDependency */,
 			);
 			name = Wallamarvel;
 			productName = Wallamarvel;
@@ -184,6 +423,81 @@
 			productReference = 81A20DBA2551054E003BBEBC /* WallamarvelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		81E99B0725510AF400FF0015 /* API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E99B1F25510AF500FF0015 /* Build configuration list for PBXNativeTarget "API" */;
+			buildPhases = (
+				BCA9ECC5F12EA41F1C0A840A /* [CP] Check Pods Manifest.lock */,
+				81E99B0325510AF400FF0015 /* Headers */,
+				81E99B0425510AF400FF0015 /* Sources */,
+				81E99B0525510AF400FF0015 /* Frameworks */,
+				81E99B0625510AF400FF0015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = API;
+			productName = API;
+			productReference = 81E99B0825510AF400FF0015 /* API.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81E99B0F25510AF400FF0015 /* APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E99B2325510AF500FF0015 /* Build configuration list for PBXNativeTarget "APITests" */;
+			buildPhases = (
+				81E99B0C25510AF400FF0015 /* Sources */,
+				81E99B0D25510AF400FF0015 /* Frameworks */,
+				81E99B0E25510AF400FF0015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81E99B1325510AF400FF0015 /* PBXTargetDependency */,
+				81E99B1525510AF400FF0015 /* PBXTargetDependency */,
+			);
+			name = APITests;
+			productName = APITests;
+			productReference = 81E99B1025510AF400FF0015 /* APITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		81E99B7C25512E0800FF0015 /* WallamarvelKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E99B9425512E0800FF0015 /* Build configuration list for PBXNativeTarget "WallamarvelKit" */;
+			buildPhases = (
+				81E99B7825512E0800FF0015 /* Headers */,
+				81E99B7925512E0800FF0015 /* Sources */,
+				81E99B7A25512E0800FF0015 /* Frameworks */,
+				81E99B7B25512E0800FF0015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WallamarvelKit;
+			productName = WallamarvelKit;
+			productReference = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81E99B8425512E0800FF0015 /* WallamarvelKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E99B9725512E0800FF0015 /* Build configuration list for PBXNativeTarget "WallamarvelKitTests" */;
+			buildPhases = (
+				81E99B8125512E0800FF0015 /* Sources */,
+				81E99B8225512E0800FF0015 /* Frameworks */,
+				81E99B8325512E0800FF0015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81E99B8825512E0800FF0015 /* PBXTargetDependency */,
+				81E99B8A25512E0800FF0015 /* PBXTargetDependency */,
+			);
+			name = WallamarvelKitTests;
+			productName = WallamarvelKitTests;
+			productReference = 81E99B8525512E0800FF0015 /* WallamarvelKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +511,22 @@
 						CreatedOnToolsVersion = 12.1;
 					};
 					81A20DB92551054E003BBEBC = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 81A20DA32551054C003BBEBC;
+					};
+					81E99B0725510AF400FF0015 = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
+					};
+					81E99B0F25510AF400FF0015 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 81A20DA32551054C003BBEBC;
+					};
+					81E99B7C25512E0800FF0015 = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
+					};
+					81E99B8425512E0800FF0015 = {
 						CreatedOnToolsVersion = 12.1;
 						TestTargetID = 81A20DA32551054C003BBEBC;
 					};
@@ -217,6 +547,10 @@
 			targets = (
 				81A20DA32551054C003BBEBC /* Wallamarvel */,
 				81A20DB92551054E003BBEBC /* WallamarvelTests */,
+				81E99B0725510AF400FF0015 /* API */,
+				81E99B0F25510AF400FF0015 /* APITests */,
+				81E99B7C25512E0800FF0015 /* WallamarvelKit */,
+				81E99B8425512E0800FF0015 /* WallamarvelKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +567,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		81A20DB82551054E003BBEBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B0625510AF400FF0015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B0E25510AF400FF0015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B7B25512E0800FF0015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B8325512E0800FF0015 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +643,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wallamarvel/Pods-Wallamarvel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BCA9ECC5F12EA41F1C0A840A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-API-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C7A4CD6784113154C6740945 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,7 +694,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E99B4D255112F600FF0015 /* LandingControllerFactory.swift in Sources */,
+				81E99B6F25511F8600FF0015 /* SlimGateway+API.swift in Sources */,
 				81A20DAC2551054C003BBEBC /* ViewController.swift in Sources */,
+				81E99B462551102D00FF0015 /* ViewControllerFactory.swift in Sources */,
+				81E99B4125510E7100FF0015 /* App.swift in Sources */,
 				81A20DA82551054C003BBEBC /* AppDelegate.swift in Sources */,
 				81A20DAA2551054C003BBEBC /* SceneDelegate.swift in Sources */,
 			);
@@ -324,6 +712,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81E99B0425510AF400FF0015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B3B25510C0700FF0015 /* Resource.swift in Sources */,
+				81E99B2E25510B8100FF0015 /* API.swift in Sources */,
+				81E99B6A2551172A00FF0015 /* API+searchHeroes.swift in Sources */,
+				81E99B7425512DDE00FF0015 /* EndPointResults.swift in Sources */,
+				81E99B3625510BB000FF0015 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B0C25510AF400FF0015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B1825510AF500FF0015 /* APITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B7925512E0800FF0015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99BA025512E1C00FF0015 /* Heroe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E99B8125512E0800FF0015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E99B8D25512E0800FF0015 /* WallamarvelKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -331,6 +755,36 @@
 			isa = PBXTargetDependency;
 			target = 81A20DA32551054C003BBEBC /* Wallamarvel */;
 			targetProxy = 81A20DBB2551054E003BBEBC /* PBXContainerItemProxy */;
+		};
+		81E99B1325510AF400FF0015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81E99B0725510AF400FF0015 /* API */;
+			targetProxy = 81E99B1225510AF400FF0015 /* PBXContainerItemProxy */;
+		};
+		81E99B1525510AF400FF0015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81A20DA32551054C003BBEBC /* Wallamarvel */;
+			targetProxy = 81E99B1425510AF400FF0015 /* PBXContainerItemProxy */;
+		};
+		81E99B1C25510AF500FF0015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81E99B0725510AF400FF0015 /* API */;
+			targetProxy = 81E99B1B25510AF500FF0015 /* PBXContainerItemProxy */;
+		};
+		81E99B8825512E0800FF0015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81E99B7C25512E0800FF0015 /* WallamarvelKit */;
+			targetProxy = 81E99B8725512E0800FF0015 /* PBXContainerItemProxy */;
+		};
+		81E99B8A25512E0800FF0015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81A20DA32551054C003BBEBC /* Wallamarvel */;
+			targetProxy = 81E99B8925512E0800FF0015 /* PBXContainerItemProxy */;
+		};
+		81E99B9125512E0800FF0015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81E99B7C25512E0800FF0015 /* WallamarvelKit */;
+			targetProxy = 81E99B9025512E0800FF0015 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -474,6 +928,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81E99AFD255107D400FF0015 /* debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +949,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81E99AFE255107E500FF0015 /* release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -556,6 +1012,202 @@
 			};
 			name = Release;
 		};
+		81E99B2025510AF500FF0015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21715E27732712EFE39580DA /* Pods-API.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = API/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.API;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		81E99B2125510AF500FF0015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF3D9ED4A82E983C935BA1D6 /* Pods-API.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = API/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.API;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		81E99B2425510AF500FF0015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				INFOPLIST_FILE = APITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.APITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wallamarvel.app/Wallamarvel";
+			};
+			name = Debug;
+		};
+		81E99B2525510AF500FF0015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				INFOPLIST_FILE = APITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.APITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wallamarvel.app/Wallamarvel";
+			};
+			name = Release;
+		};
+		81E99B9525512E0800FF0015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WallamarvelKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.WallamarvelKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		81E99B9625512E0800FF0015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WallamarvelKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.WallamarvelKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		81E99B9825512E0800FF0015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				INFOPLIST_FILE = WallamarvelKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.WallamarvelKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wallamarvel.app/Wallamarvel";
+			};
+			name = Debug;
+		};
+		81E99B9925512E0800FF0015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV4G4K6D9Y;
+				INFOPLIST_FILE = WallamarvelKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanvillaescusa.WallamarvelKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wallamarvel.app/Wallamarvel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,6 +1234,42 @@
 			buildConfigurations = (
 				81A20DD22551054E003BBEBC /* Debug */,
 				81A20DD32551054E003BBEBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81E99B1F25510AF500FF0015 /* Build configuration list for PBXNativeTarget "API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E99B2025510AF500FF0015 /* Debug */,
+				81E99B2125510AF500FF0015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81E99B2325510AF500FF0015 /* Build configuration list for PBXNativeTarget "APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E99B2425510AF500FF0015 /* Debug */,
+				81E99B2525510AF500FF0015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81E99B9425512E0800FF0015 /* Build configuration list for PBXNativeTarget "WallamarvelKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E99B9525512E0800FF0015 /* Debug */,
+				81E99B9625512E0800FF0015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81E99B9725512E0800FF0015 /* Build configuration list for PBXNativeTarget "WallamarvelKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E99B9825512E0800FF0015 /* Debug */,
+				81E99B9925512E0800FF0015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
