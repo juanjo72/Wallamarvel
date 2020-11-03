@@ -35,6 +35,10 @@
 		81E99B9225512E0800FF0015 /* WallamarvelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */; };
 		81E99B9325512E0800FF0015 /* WallamarvelKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81E99BA025512E1C00FF0015 /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B9F25512E1C00FF0015 /* Heroe.swift */; };
+		81FD538E2551700000534B8F /* LandingControllerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD538D2551700000534B8F /* LandingControllerRepository.swift */; };
+		81FD539A255172A300534B8F /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD5399255172A300534B8F /* LandingViewModel.swift */; };
+		81FD53A6255176DD00534B8F /* HeroeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD53A5255176DC00534B8F /* HeroeCard.swift */; };
+		81FD54002551788C00534B8F /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD53FF2551788C00534B8F /* LandingViewController.swift */; };
 		982D0221A4FEA43CFF9C8909 /* Pods_WallamarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139A6DF7910394B29E9CCCAC /* Pods_WallamarvelTests.framework */; };
 		E658B7E9233F4A125EA6BA45 /* Pods_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E20231184E04CAA6F93497 /* Pods_API.framework */; };
 /* End PBXBuildFile section */
@@ -148,6 +152,10 @@
 		81E99B8C25512E0800FF0015 /* WallamarvelKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallamarvelKitTests.swift; sourceTree = "<group>"; };
 		81E99B8E25512E0800FF0015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E99B9F25512E1C00FF0015 /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
+		81FD538D2551700000534B8F /* LandingControllerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerRepository.swift; sourceTree = "<group>"; };
+		81FD5399255172A300534B8F /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		81FD53A5255176DC00534B8F /* HeroeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCard.swift; sourceTree = "<group>"; };
+		81FD53FF2551788C00534B8F /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		AF3D9ED4A82E983C935BA1D6 /* Pods-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API.release.xcconfig"; path = "Target Support Files/Pods-API/Pods-API.release.xcconfig"; sourceTree = "<group>"; };
 		B90F59BC738F982C430DE8FF /* Pods-Wallamarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallamarvel.release.xcconfig"; path = "Target Support Files/Pods-Wallamarvel/Pods-Wallamarvel.release.xcconfig"; sourceTree = "<group>"; };
 		FD73AC7D72E0350E0CB3B146 /* Pods-WallamarvelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallamarvelTests.debug.xcconfig"; path = "Target Support Files/Pods-WallamarvelTests/Pods-WallamarvelTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -326,7 +334,11 @@
 		81E99B4B255112DA00FF0015 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				81FD53FF2551788C00534B8F /* LandingViewController.swift */,
+				81FD5399255172A300534B8F /* LandingViewModel.swift */,
+				81FD538D2551700000534B8F /* LandingControllerRepository.swift */,
 				81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */,
+				81FD53A5255176DC00534B8F /* HeroeCard.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -694,13 +706,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81FD539A255172A300534B8F /* LandingViewModel.swift in Sources */,
 				81E99B4D255112F600FF0015 /* LandingControllerFactory.swift in Sources */,
+				81FD54002551788C00534B8F /* LandingViewController.swift in Sources */,
 				81E99B6F25511F8600FF0015 /* SlimGateway+API.swift in Sources */,
 				81A20DAC2551054C003BBEBC /* ViewController.swift in Sources */,
 				81E99B462551102D00FF0015 /* ViewControllerFactory.swift in Sources */,
 				81E99B4125510E7100FF0015 /* App.swift in Sources */,
 				81A20DA82551054C003BBEBC /* AppDelegate.swift in Sources */,
+				81FD53A6255176DD00534B8F /* HeroeCard.swift in Sources */,
 				81A20DAA2551054C003BBEBC /* SceneDelegate.swift in Sources */,
+				81FD538E2551700000534B8F /* LandingControllerRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

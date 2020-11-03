@@ -15,8 +15,8 @@ final class App {
     lazy var api: API = {
         let credentials = Credentials(publicKey: Bundle.main.publicKey, privateKey: Bundle.main.privateKey)
         let gateway = SlimGateway()
-        gateway.debug = true
-        let api = API(gateway: SlimGateway(), credentials: credentials)
+        gateway.debug = ProcessInfo.processInfo.isAPICallsDebugging
+        let api = API(gateway: gateway, credentials: credentials)
         return api
     }()
     
@@ -46,5 +46,11 @@ fileprivate extension Bundle {
     
     var privateKey: String {
         infoDictionary?["APIMarvelPrivateKey"] as! String
+    }
+}
+
+fileprivate extension ProcessInfo {
+    var isAPICallsDebugging: Bool {
+        environment["API_CALLS_DEBUG"] == "enable"
     }
 }

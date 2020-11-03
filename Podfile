@@ -8,6 +8,7 @@ target 'Wallamarvel' do
 
   pod 'RxSwift', '~> 5.1.0'
   pod 'RxCocoa', '~> 5.1.0'
+  pod 'RxDataSources', '~> 4.0.0'
   pod 'SlimGateway', '~> 2.0.0'
   
 

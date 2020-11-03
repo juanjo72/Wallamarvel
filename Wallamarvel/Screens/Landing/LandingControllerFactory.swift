@@ -9,15 +9,10 @@ import UIKit
 
 extension ViewFactoryController {
     func makeLanding() -> UIViewController {
-        api.fetchHeroes(page: 0..<10) { result in
-            switch result {
-            case .success(let values):
-                print(values.map { $0.name })
-            case .failure(_):
-                break
-            }
-        }
+        let repo = LandingControllerRepository(api: api)
+        let viewModel = LandingViewModel(repo: repo)
+        let vc = LandingViewController(viewModel: viewModel)
         
-        return UIViewController()
+        return vc
     }
 }
