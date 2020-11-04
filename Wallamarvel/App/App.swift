@@ -10,7 +10,11 @@ import API
 
 final class App {
     
+    // MARK: Injected
+    
     unowned var window: UIWindow
+    
+    // MARK: Components
     
     lazy var api: API = {
         let credentials = Credentials(publicKey: Bundle.main.publicKey, privateKey: Bundle.main.privateKey)
@@ -33,7 +37,9 @@ final class App {
     // MARK: Public
     
     func appDidLaunch() {
-        window.rootViewController = viewControllerFactory.makeLanding()
+        let landingVC = viewControllerFactory.makeLanding()
+        let landingNC = UINavigationController(rootViewController: landingVC)
+        window.rootViewController = landingNC
     }
 }
 

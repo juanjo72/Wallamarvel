@@ -11,7 +11,7 @@ import RxDataSources
 extension LandingViewModel {
     struct HeroeCard {
         let id: Int
-        let URL: URL?
+        let url: URL?
     }
 }
 
@@ -36,6 +36,20 @@ extension LandingViewModel.HeroeCard: RxDataSources.IdentifiableType {
 extension LandingViewModel.HeroeCard {
     init(heroe: Heroe) {
         self.id = heroe.id
-        self.URL = heroe.thumbURL
+        self.url = heroe.thumbURL
+    }
+}
+
+extension LandingViewModel.HeroeCard: CollectionViewCellDescriptable {
+    var cellDescriptor: CollectionViewCellDescriptor {
+        CollectionViewCellDescriptor(reuseIdentifier: "cell") { (cell: ImageCell) in
+            cell.imageView.kf.setImage(with: self.url)
+        }
+    }
+}
+
+extension LandingViewModel.HeroeCard: Identifiable {
+    var uniqueIdentifier: String {
+        "\(id)"
     }
 }

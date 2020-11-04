@@ -16,6 +16,20 @@ final class LandingViewController: UIViewController {
     
     let viewModel: LandingViewModel
     
+    // MARK: UI
+    
+    lazy var tileView: TileView<LandingViewModel.HeroeCard> = {
+        let configuration = TileViewConfiguration(numColumns: 2)
+        let view = TileView<LandingViewModel.HeroeCard>(configuration: configuration)
+        view.didSelectItem = { [unowned self] item in
+            self.viewModel.didSelect(item: item)
+        }
+        view.willDisplayLastItem = { [unowned self] _ in
+            self.viewModel.collectionViewDidReachEnd()
+        }
+        return view
+    }()
+    
     // MARK: Private
     
     private let bag = DisposeBag()
@@ -35,16 +49,32 @@ final class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configuration()
         setBindings()
         viewModel.viewDidLoad()
     }
     
     // MARK: Private
     
+    private func configuration() {
+        view.backgroundColor = UIColor.white
+        view.addSubview(tileView)
+        tileView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
+    }
+    
     private func setBindings() {
         viewModel.cards
-            .debug("cards")
-            .subscribe()
+            .bind(to: tileView.rx.cards)
             .disposed(by: bag)
+    }
+}
+
+extension Reactive where Base == TileView<LandingViewModel.HeroeCard> {
+    var cards: Binder<[LandingViewModel.HeroeCard]> {
+        Binder(base) { view, items in
+            view.items = items
+        }
     }
 }

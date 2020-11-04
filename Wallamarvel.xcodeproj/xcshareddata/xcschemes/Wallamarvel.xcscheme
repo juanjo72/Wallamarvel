@@ -84,7 +84,7 @@
          <EnvironmentVariable
             key = "API_CALLS_DEBUG"
             value = "enable"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>

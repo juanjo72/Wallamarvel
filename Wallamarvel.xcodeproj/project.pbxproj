@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0EBEE75579324084341D2A61 /* Pods_Wallamarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E351757AB1101F207762E /* Pods_Wallamarvel.framework */; };
+		81991EE725519E2300C786AB /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991EE625519E2300C786AB /* TileView.swift */; };
+		81991EFE25519F4800C786AB /* AnimatableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991EFD25519F4800C786AB /* AnimatableSection.swift */; };
+		81991F0A2551A05000C786AB /* CollectionViewCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991F092551A05000C786AB /* CollectionViewCellDescriptor.swift */; };
+		81991F652551B70100C786AB /* TileViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991F642551B70100C786AB /* TileViewLayout.swift */; };
+		81991F712551B9A500C786AB /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991F702551B9A500C786AB /* ImageCell.swift */; };
+		81991FAC2551E0FD00C786AB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991FAB2551E0FD00C786AB /* UIViewControllerExtensions.swift */; };
+		81991FB32551E14200C786AB /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991FB22551E14200C786AB /* DropDownView.swift */; };
 		81A20DA82551054C003BBEBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20DA72551054C003BBEBC /* AppDelegate.swift */; };
-		81A20DAA2551054C003BBEBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20DA92551054C003BBEBC /* SceneDelegate.swift */; };
-		81A20DAC2551054C003BBEBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A20DAB2551054C003BBEBC /* ViewController.swift */; };
 		81A20DAF2551054C003BBEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A20DAD2551054C003BBEBC /* Main.storyboard */; };
 		81A20DB12551054E003BBEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A20DB02551054E003BBEBC /* Assets.xcassets */; };
 		81A20DB42551054E003BBEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A20DB22551054E003BBEBC /* LaunchScreen.storyboard */; };
@@ -27,7 +32,7 @@
 		81E99B462551102D00FF0015 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B452551102D00FF0015 /* ViewControllerFactory.swift */; };
 		81E99B4D255112F600FF0015 /* LandingControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */; };
 		81E99B6A2551172A00FF0015 /* API+searchHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B692551172A00FF0015 /* API+searchHeroes.swift */; };
-		81E99B6F25511F8600FF0015 /* SlimGateway+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B6E25511F8600FF0015 /* SlimGateway+API.swift */; };
+		81E99B6F25511F8600FF0015 /* API+SlimGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B6E25511F8600FF0015 /* API+SlimGateway.swift */; };
 		81E99B7425512DDE00FF0015 /* EndPointResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B7325512DDE00FF0015 /* EndPointResults.swift */; };
 		81E99B8625512E0800FF0015 /* WallamarvelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */; };
 		81E99B8D25512E0800FF0015 /* WallamarvelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E99B8C25512E0800FF0015 /* WallamarvelKitTests.swift */; };
@@ -117,10 +122,15 @@
 		453E351757AB1101F207762E /* Pods_Wallamarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallamarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6834F9339747E09663ACE6BB /* Pods-WallamarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallamarvelTests.release.xcconfig"; path = "Target Support Files/Pods-WallamarvelTests/Pods-WallamarvelTests.release.xcconfig"; sourceTree = "<group>"; };
 		69E20231184E04CAA6F93497 /* Pods_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81991EE625519E2300C786AB /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		81991EFD25519F4800C786AB /* AnimatableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSection.swift; sourceTree = "<group>"; };
+		81991F092551A05000C786AB /* CollectionViewCellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellDescriptor.swift; sourceTree = "<group>"; };
+		81991F642551B70100C786AB /* TileViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewLayout.swift; sourceTree = "<group>"; };
+		81991F702551B9A500C786AB /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		81991FAB2551E0FD00C786AB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		81991FB22551E14200C786AB /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		81A20DA42551054C003BBEBC /* Wallamarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallamarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A20DA72551054C003BBEBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81A20DA92551054C003BBEBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81A20DAB2551054C003BBEBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81A20DAE2551054C003BBEBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81A20DB02551054E003BBEBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81A20DB32551054E003BBEBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,7 +153,7 @@
 		81E99B452551102D00FF0015 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerFactory.swift; sourceTree = "<group>"; };
 		81E99B692551172A00FF0015 /* API+searchHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+searchHeroes.swift"; sourceTree = "<group>"; };
-		81E99B6E25511F8600FF0015 /* SlimGateway+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SlimGateway+API.swift"; sourceTree = "<group>"; };
+		81E99B6E25511F8600FF0015 /* API+SlimGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+SlimGateway.swift"; sourceTree = "<group>"; };
 		81E99B7325512DDE00FF0015 /* EndPointResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointResults.swift; sourceTree = "<group>"; };
 		81E99B7D25512E0800FF0015 /* WallamarvelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WallamarvelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E99B7F25512E0800FF0015 /* WallamarvelKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WallamarvelKit.h; sourceTree = "<group>"; };
@@ -227,6 +237,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		81991EE525519DF200C786AB /* _uicomponent */ = {
+			isa = PBXGroup;
+			children = (
+				81991FCB2551E48900C786AB /* TileView */,
+				81991FAB2551E0FD00C786AB /* UIViewControllerExtensions.swift */,
+				81991FB22551E14200C786AB /* DropDownView.swift */,
+			);
+			path = _uicomponent;
+			sourceTree = "<group>";
+		};
+		81991FCB2551E48900C786AB /* TileView */ = {
+			isa = PBXGroup;
+			children = (
+				81991EE625519E2300C786AB /* TileView.swift */,
+				81991F642551B70100C786AB /* TileViewLayout.swift */,
+				81991F092551A05000C786AB /* CollectionViewCellDescriptor.swift */,
+				81991EFD25519F4800C786AB /* AnimatableSection.swift */,
+			);
+			path = TileView;
+			sourceTree = "<group>";
+		};
 		81A20D9B2551054C003BBEBC = {
 			isa = PBXGroup;
 			children = (
@@ -261,8 +292,7 @@
 				81A20DA72551054C003BBEBC /* AppDelegate.swift */,
 				81E99B3F25510E6200FF0015 /* App */,
 				81E99B4A255112C400FF0015 /* Screens */,
-				81A20DA92551054C003BBEBC /* SceneDelegate.swift */,
-				81A20DAB2551054C003BBEBC /* ViewController.swift */,
+				81991EE525519DF200C786AB /* _uicomponent */,
 				81E99AFC255107B200FF0015 /* Configurations */,
 				81A20DAD2551054C003BBEBC /* Main.storyboard */,
 				81A20DB02551054E003BBEBC /* Assets.xcassets */,
@@ -317,8 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				81E99B4025510E7100FF0015 /* App.swift */,
-				81E99B6E25511F8600FF0015 /* SlimGateway+API.swift */,
 				81E99B452551102D00FF0015 /* ViewControllerFactory.swift */,
+				81E99B6E25511F8600FF0015 /* API+SlimGateway.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -339,6 +369,7 @@
 				81FD538D2551700000534B8F /* LandingControllerRepository.swift */,
 				81E99B4C255112F600FF0015 /* LandingControllerFactory.swift */,
 				81FD53A5255176DC00534B8F /* HeroeCard.swift */,
+				81991F702551B9A500C786AB /* ImageCell.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -708,14 +739,19 @@
 			files = (
 				81FD539A255172A300534B8F /* LandingViewModel.swift in Sources */,
 				81E99B4D255112F600FF0015 /* LandingControllerFactory.swift in Sources */,
+				81991F652551B70100C786AB /* TileViewLayout.swift in Sources */,
 				81FD54002551788C00534B8F /* LandingViewController.swift in Sources */,
-				81E99B6F25511F8600FF0015 /* SlimGateway+API.swift in Sources */,
-				81A20DAC2551054C003BBEBC /* ViewController.swift in Sources */,
+				81E99B6F25511F8600FF0015 /* API+SlimGateway.swift in Sources */,
+				81991FB32551E14200C786AB /* DropDownView.swift in Sources */,
+				81991EE725519E2300C786AB /* TileView.swift in Sources */,
 				81E99B462551102D00FF0015 /* ViewControllerFactory.swift in Sources */,
+				81991FAC2551E0FD00C786AB /* UIViewControllerExtensions.swift in Sources */,
 				81E99B4125510E7100FF0015 /* App.swift in Sources */,
 				81A20DA82551054C003BBEBC /* AppDelegate.swift in Sources */,
+				81991F0A2551A05000C786AB /* CollectionViewCellDescriptor.swift in Sources */,
 				81FD53A6255176DD00534B8F /* HeroeCard.swift in Sources */,
-				81A20DAA2551054C003BBEBC /* SceneDelegate.swift in Sources */,
+				81991EFE25519F4800C786AB /* AnimatableSection.swift in Sources */,
+				81991F712551B9A500C786AB /* ImageCell.swift in Sources */,
 				81FD538E2551700000534B8F /* LandingControllerRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -875,7 +911,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -930,7 +966,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

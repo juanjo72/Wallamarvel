@@ -15,9 +15,10 @@ final class LandingViewModel {
     
     let repo: LandingControllerRepositoryType
     
-    // MARK: External Handlers
+    // MARK: External Actions
     
     var didError: ((Error) -> Void)?
+    var didSelect: ((Heroe) -> Void)?
     
     // MARK: Observables
     
@@ -45,6 +46,11 @@ final class LandingViewModel {
         fetchNextPage()
     }
     
+    func didSelect(item: HeroeCard) {
+        guard let selected = (allHeroes.value.first { $0.id == item.id }) else { return }
+        didSelect?(selected)
+    }
+    
     // MARK: Business Logic
     
     private func fetchNextPage() {
@@ -56,7 +62,7 @@ final class LandingViewModel {
     
     private func fetchAllHeroes(page: Range<Int>) -> Completable {
         Completable.create { [unowned self] observer in
-            self.repo.fetchHeroes(search: nil, page:  0..<10)
+            self.repo.fetchHeroes(search: nil, page: page)
                 .subscribe(
                     onSuccess: { [weak self] in
                         guard let strongSelf = self else { return }

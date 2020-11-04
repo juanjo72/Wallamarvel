@@ -13,6 +13,13 @@ extension ViewFactoryController {
         let viewModel = LandingViewModel(repo: repo)
         let vc = LandingViewController(viewModel: viewModel)
         
+        viewModel.didSelect = { heroe in
+            print(heroe.name)
+        }
+        viewModel.didError = { [unowned vc] error in
+            vc.display(error: error)
+        }
+        
         return vc
     }
 }
