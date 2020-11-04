@@ -9,11 +9,11 @@ import RxSwift
 import RxCocoa
 import WallamarvelKit
 
-final class LandingViewModel {
+final class HeroesViewModel {
     
     // MARK: Injected
     
-    let repo: LandingControllerRepositoryType
+    let repo: HeroesRepositoryType
     
     // MARK: External Actions
     
@@ -23,15 +23,20 @@ final class LandingViewModel {
     // MARK: Observables
     
     let cards = PublishRelay<[HeroeCard]>()
+    let isLoading = BehaviorRelay<Bool>(value: false)
     
     // MARK: Private
     
-    private let allHeroes = BehaviorRelay<[Heroe]>(value: [])
+    private var nextPageToFetch: Range<Int> {
+        (allHeroes.value.count)..<(allHeroes.value.count + .pageSize)
+    }
+    
+    private let allHeroes = BehaviorRelay<Set<Heroe>>(value: []) // model
     private let bag = DisposeBag()
     
     // MARK: Lifecycle
     
-    init(repo: LandingControllerRepository) {
+    init(repo: HeroesRepository) {
         self.repo = repo
     }
     
@@ -54,22 +59,26 @@ final class LandingViewModel {
     // MARK: Business Logic
     
     private func fetchNextPage() {
-        let page = (allHeroes.value.count)..<(allHeroes.value.count + 10)
-        fetchAllHeroes(page: page)
-            .subscribe()
+        isLoading.accept(true)
+        fetchAllHeroes(page: nextPageToFetch)
+            .subscribe(
+                onCompleted: { [unowned self] in self.isLoading.accept(false) },
+                onError: { [unowned self] _ in self.isLoading.accept(false)} )
             .disposed(by: bag)
     }
     
     private func fetchAllHeroes(page: Range<Int>) -> Completable {
         Completable.create { [unowned self] observer in
-            self.repo.fetchHeroes(search: nil, page: page)
+            self.repo.fetchHeroes(page: page)
                 .subscribe(
-                    onSuccess: { [weak self] in
+                    onSuccess: { [weak self] values in
                         guard let strongSelf = self else { return }
-                        strongSelf.allHeroes.accept(strongSelf.allHeroes.value + $0)
+                        strongSelf.allHeroes.accept(strongSelf.allHeroes.value.union(values))
+                        observer(.completed)
                     },
                     onError: { [weak self] in
                         self?.didError?($0)
+                        observer(.error($0))
                     })
         }
     }
@@ -78,8 +87,19 @@ final class LandingViewModel {
     
     private func setPresentaionLogic() {
         allHeroes
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
+            .map { $0.sorted { $0.name < $1.name }}
             .map { $0.map(HeroeCard.init) }
             .bind(to: cards)
             .disposed(by: bag)
+    }
+}
+
+
+
+fileprivate extension Int {
+    static var pageSize: Int {
+        25
     }
 }

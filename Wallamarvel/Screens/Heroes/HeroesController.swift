@@ -10,17 +10,18 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class LandingViewController: UIViewController {
+final class HeroesController: UIViewController {
     
     // MARK: Injected
     
-    let viewModel: LandingViewModel
+    let viewModel: HeroesViewModel
+    let resultsViewModel: SearchViewModel
     
     // MARK: UI
     
-    lazy var tileView: TileView<LandingViewModel.HeroeCard> = {
+    lazy var tileView: TileView<HeroeCard> = {
         let configuration = TileViewConfiguration(numColumns: 2)
-        let view = TileView<LandingViewModel.HeroeCard>(configuration: configuration)
+        let view = TileView<HeroeCard>(configuration: configuration)
         view.didSelectItem = { [unowned self] item in
             self.viewModel.didSelect(item: item)
         }
@@ -30,14 +31,25 @@ final class LandingViewController: UIViewController {
         return view
     }()
     
+    lazy var searchController: UISearchController = {
+        let vc = UISearchController(searchResultsController: resultsController)
+        vc.searchResultsUpdater = resultsController
+        return vc
+    }()
+    
+    lazy var resultsController: SearchController = {
+        SearchController(viewModel: resultsViewModel)
+    }()
+    
     // MARK: Private
     
     private let bag = DisposeBag()
     
     // MARK: Lifecycle
     
-    init(viewModel: LandingViewModel) {
+    init(viewModel: HeroesViewModel, resultsViewModel: SearchViewModel) {
         self.viewModel = viewModel
+        self.resultsViewModel = resultsViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -58,6 +70,10 @@ final class LandingViewController: UIViewController {
     
     private func configuration() {
         view.backgroundColor = UIColor.white
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+        
         view.addSubview(tileView)
         tileView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
@@ -68,11 +84,14 @@ final class LandingViewController: UIViewController {
         viewModel.cards
             .bind(to: tileView.rx.cards)
             .disposed(by: bag)
+        viewModel.isLoading
+            .bind(to: rx.isLoading)
+            .disposed(by: bag)
     }
 }
 
-extension Reactive where Base == TileView<LandingViewModel.HeroeCard> {
-    var cards: Binder<[LandingViewModel.HeroeCard]> {
+extension Reactive where Base == TileView<HeroeCard> {
+    var cards: Binder<[HeroeCard]> {
         Binder(base) { view, items in
             view.items = items
         }

@@ -14,6 +14,18 @@ public struct Heroe {
     public let thumbURL: URL?
 }
 
+extension Heroe: Equatable {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+extension Heroe: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
 extension Heroe: Decodable {
     struct Thumbnail: Decodable {
         let path: String

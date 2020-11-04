@@ -8,39 +8,37 @@
 import WallamarvelKit
 import RxDataSources
 
-extension LandingViewModel {
-    struct HeroeCard {
-        let id: Int
-        let url: URL?
-    }
+struct HeroeCard {
+    let id: Int
+    let url: URL?
 }
 
-extension LandingViewModel.HeroeCard: Equatable {
+extension HeroeCard: Equatable {
     static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }
 }
 
-extension LandingViewModel.HeroeCard: Hashable {
+extension HeroeCard: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
 }
 
-extension LandingViewModel.HeroeCard: RxDataSources.IdentifiableType {
+extension HeroeCard: RxDataSources.IdentifiableType {
     var identity: Int {
         id
     }
 }
 
-extension LandingViewModel.HeroeCard {
+extension HeroeCard {
     init(heroe: Heroe) {
         self.id = heroe.id
         self.url = heroe.thumbURL
     }
 }
 
-extension LandingViewModel.HeroeCard: CollectionViewCellDescriptable {
+extension HeroeCard: CollectionViewCellDescriptable {
     var cellDescriptor: CollectionViewCellDescriptor {
         CollectionViewCellDescriptor(reuseIdentifier: "cell") { (cell: ImageCell) in
             cell.imageView.kf.setImage(with: self.url)
@@ -48,7 +46,7 @@ extension LandingViewModel.HeroeCard: CollectionViewCellDescriptable {
     }
 }
 
-extension LandingViewModel.HeroeCard: Identifiable {
+extension HeroeCard: Identifiable {
     var uniqueIdentifier: String {
         "\(id)"
     }

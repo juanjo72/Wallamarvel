@@ -38,6 +38,6 @@ extension APIError: LocalizedError {
 
 extension String {
     func localized(table: String? = nil) -> String {
-        return NSLocalizedString(self, tableName: table, bundle: Bundle.main, value: "", comment: "")
+        return NSLocalizedString(self, tableName: table, bundle: Bundle(identifier: "com.juanvillaescusa.API")!, value: "", comment: "")
     }
 }

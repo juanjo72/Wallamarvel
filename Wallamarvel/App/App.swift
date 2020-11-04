@@ -20,8 +20,7 @@ final class App {
         let credentials = Credentials(publicKey: Bundle.main.publicKey, privateKey: Bundle.main.privateKey)
         let gateway = SlimGateway()
         gateway.debug = ProcessInfo.processInfo.isAPICallsDebugging
-        let api = API(gateway: gateway, credentials: credentials)
-        return api
+        return API(gateway: gateway, credentials: credentials)
     }()
     
     lazy var viewControllerFactory: ViewFactoryController = {
@@ -37,7 +36,7 @@ final class App {
     // MARK: Public
     
     func appDidLaunch() {
-        let landingVC = viewControllerFactory.makeLanding()
+        let landingVC = viewControllerFactory.makeHeroesController()
         let landingNC = UINavigationController(rootViewController: landingVC)
         window.rootViewController = landingNC
     }

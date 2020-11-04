@@ -10,11 +10,11 @@ import WallamarvelKit
 import RxSwift
 import RxCocoa
 
-protocol LandingControllerRepositoryType {
-    func fetchHeroes(search: String?, page: Range<Int>) -> Single<[Heroe]>
+protocol HeroesRepositoryType {
+    func fetchHeroes(page: Range<Int>) -> Single<[Heroe]>
 }
 
-final class LandingControllerRepository: LandingControllerRepositoryType {
+final class HeroesRepository: HeroesRepositoryType {
     
     // MARK: Injected
     
@@ -26,18 +26,12 @@ final class LandingControllerRepository: LandingControllerRepositoryType {
         self.api = api
     }
     
-    // MARK: LandingControllerRepositoryType
+    // MARK: HeroesRepositoryType
     
-    func fetchHeroes(search: String?, page: Range<Int>) -> Single<[Heroe]> {
+    func fetchHeroes(page: Range<Int>) -> Single<[Heroe]> {
         Single<[Heroe]>.create { [unowned self] observer in
-            if let search = search {
-                self.api.searchHeroes(string: search, page: page) { result in
-                    observer(SingleEvent(result: result))
-                }
-            } else {
-                self.api.fetchHeroes(page: page) { result in
-                    observer(SingleEvent(result: result))
-                }
+            self.api.fetchHeroes(page: page) { result in
+                observer(SingleEvent(result: result))
             }
             return Disposables.create()
         }

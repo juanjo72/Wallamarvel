@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 extension UIViewController {
     func display(error: Error, autoDismissInterval: TimeInterval = 5) {
@@ -35,6 +37,36 @@ extension UIViewController {
         dropDownView.didDismiss = {
             dropDownView.removeFromSuperview()
             appWindow.windowLevel = .normal
+        }
+    }
+}
+
+extension UIViewController {
+    func addSpinner() {
+        guard (view.subviews.compactMap { $0 as? UIActivityIndicatorView }.filter { $0.accessibilityLabel == "spinner" }).isEmpty else { return }
+        let spinner = UIActivityIndicatorView.init(style: .gray)
+        spinner.startAnimating()
+        spinner.accessibilityLabel = "spinner"
+        view.addSubview(spinner)
+        spinner.snp.makeConstraints { maker in
+            maker.centerX.equalTo(view.layoutMarginsGuide.snp.centerX)
+            maker.centerY.equalTo(view.layoutMarginsGuide.snp.centerY)
+        }
+    }
+    
+    func removeSpinner() {
+        view.subviews.compactMap { $0 as? UIActivityIndicatorView }.filter { $0.accessibilityLabel == "spinner" }.forEach { $0.removeFromSuperview() }
+    }
+}
+
+extension Reactive where Base: UIViewController {
+    var isLoading: Binder<Bool> {
+        return Binder(base) { viewController, waiting in
+            if waiting {
+                viewController.addSpinner()
+            } else {
+                viewController.removeSpinner()
+            }
         }
     }
 }

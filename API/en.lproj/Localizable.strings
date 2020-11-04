@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Wallamarvel
+
+  Created by Juanjo García Villaescusa on 04/11/2020.
+  
+*/
+
+"ERROR_CONNECTION" = "Argh, it seems like your internet connection is weak or absent!";
+"ERROR_SERVER_RESPONSE" = "Argh, something is taking a bit too much. Try again in a while!";
