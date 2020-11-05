@@ -14,17 +14,9 @@ protocol Identifiable: Hashable {
     var uniqueIdentifier: String { get }
 }
 
-struct TileViewConfiguration {
-    let numColumns: Int
-}
-
 typealias TileViewRepresantable = RxDataSources.IdentifiableType & Identifiable & CollectionViewCellDescriptable
 
 final class TileView<Item: TileViewRepresantable>: UIView {
-    
-    // MARK: Injected
-    
-    let configuration: TileViewConfiguration
     
     // Interaction Callbacks
     
@@ -46,10 +38,7 @@ final class TileView<Item: TileViewRepresantable>: UIView {
         return source
     }()
     
-    lazy var layout: UICollectionViewLayout = {
-        let layout = TileViewLayout(configuration: configuration)
-        return layout
-    }()
+    var layout: TileViewLayout
     
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -92,8 +81,8 @@ final class TileView<Item: TileViewRepresantable>: UIView {
     
     // MARK: Lifecycle
     
-    init(configuration: TileViewConfiguration) {
-        self.configuration = configuration
+    init(numColumns: Int) {
+        self.layout = TileViewLayout(numColumns: numColumns)
         super.init(frame: .zero)
         configure()
     }
@@ -105,7 +94,7 @@ final class TileView<Item: TileViewRepresantable>: UIView {
     // MARK: UIView
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: layout.collectionViewContentSize.width, height: UIView.noIntrinsicMetric)
+        CGSize(width: layout.collectionViewContentSize.width, height: UIView.noIntrinsicMetric)
     }
     
     override func safeAreaInsetsDidChange() {

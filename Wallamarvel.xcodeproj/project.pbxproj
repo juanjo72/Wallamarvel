@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0EBEE75579324084341D2A61 /* Pods_Wallamarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E351757AB1101F207762E /* Pods_Wallamarvel.framework */; };
+		81285AE92553C7B80025889C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81285AE82553C7B80025889C /* NavigationController.swift */; };
+		81285B112553D2AD0025889C /* NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81285B102553D2AD0025889C /* NavigationBarStyle.swift */; };
+		81285B18255406080025889C /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81285B17255406070025889C /* Rx.swift */; };
+		81285B1F25543D4D0025889C /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81285B1E25543D4D0025889C /* CGFloat.swift */; };
 		814ED7482552B9CD00CB9443 /* HeroeDatailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED7472552B9CD00CB9443 /* HeroeDatailRepository.swift */; };
 		814ED74F2552BB2D00CB9443 /* HeroeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED74E2552BB2D00CB9443 /* HeroeDetailViewModel.swift */; };
 		814ED75B2552BDA700CB9443 /* HeroeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED75A2552BDA700CB9443 /* HeroeDetailViewController.swift */; };
@@ -129,6 +133,10 @@
 		453E351757AB1101F207762E /* Pods_Wallamarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallamarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6834F9339747E09663ACE6BB /* Pods-WallamarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallamarvelTests.release.xcconfig"; path = "Target Support Files/Pods-WallamarvelTests/Pods-WallamarvelTests.release.xcconfig"; sourceTree = "<group>"; };
 		69E20231184E04CAA6F93497 /* Pods_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81285AE82553C7B80025889C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		81285B102553D2AD0025889C /* NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyle.swift; sourceTree = "<group>"; };
+		81285B17255406070025889C /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
+		81285B1E25543D4D0025889C /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		814ED7472552B9CD00CB9443 /* HeroeDatailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDatailRepository.swift; sourceTree = "<group>"; };
 		814ED74E2552BB2D00CB9443 /* HeroeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewModel.swift; sourceTree = "<group>"; };
 		814ED75A2552BDA700CB9443 /* HeroeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				81991FAB2551E0FD00C786AB /* UIViewControllerExtensions.swift */,
+				81285B17255406070025889C /* Rx.swift */,
+				81285B1E25543D4D0025889C /* CGFloat.swift */,
 			);
 			path = _extensions;
 			sourceTree = "<group>";
@@ -392,6 +402,8 @@
 				81E99B4025510E7100FF0015 /* App.swift */,
 				81E99B452551102D00FF0015 /* ViewControllerFactory.swift */,
 				81E99B6E25511F8600FF0015 /* API+SlimGateway.swift */,
+				81285AE82553C7B80025889C /* NavigationController.swift */,
+				81285B102553D2AD0025889C /* NavigationBarStyle.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -783,11 +795,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				81FD539A255172A300534B8F /* HeroesViewModel.swift in Sources */,
+				81285AE92553C7B80025889C /* NavigationController.swift in Sources */,
 				81E99B4D255112F600FF0015 /* HeroesControllerFactory.swift in Sources */,
 				81991F652551B70100C786AB /* TileViewLayout.swift in Sources */,
 				814ED7672552BE2C00CB9443 /* HeroeDetailControllerFactory.swift in Sources */,
+				81285B112553D2AD0025889C /* NavigationBarStyle.swift in Sources */,
 				814ED74F2552BB2D00CB9443 /* HeroeDetailViewModel.swift in Sources */,
+				81285B18255406080025889C /* Rx.swift in Sources */,
 				81FD54002551788C00534B8F /* HeroesController.swift in Sources */,
+				81285B1F25543D4D0025889C /* CGFloat.swift in Sources */,
 				81E99B6F25511F8600FF0015 /* API+SlimGateway.swift in Sources */,
 				81991FB32551E14200C786AB /* DropDownView.swift in Sources */,
 				814ED75B2552BDA700CB9443 /* HeroeDetailViewController.swift in Sources */,
@@ -963,7 +979,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1018,7 +1034,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

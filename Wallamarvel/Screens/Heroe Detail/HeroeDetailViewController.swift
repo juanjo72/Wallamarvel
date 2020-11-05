@@ -20,6 +20,7 @@ final class HeroeDetailViewController: UIViewController {
     
     lazy var masterScroll: UIScrollView = {
         let scroll = UIScrollView()
+        scroll.contentInsetAdjustmentBehavior = .never
         scroll.showsVerticalScrollIndicator = false
         scroll.addSubview(masterStack)
         masterStack.snp.makeConstraints { maker in
@@ -31,10 +32,9 @@ final class HeroeDetailViewController: UIViewController {
     
     lazy var masterStack: UIStackView = {
         let stack = UIStackView()
-        stack.axis = .vertical
-        stack.isLayoutMarginsRelativeArrangement = true
+        stack.axis = traitCollection.horizontalSizeClass == .compact ? .vertical : .horizontal
         stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: .doubleSpace, right: 0)
-        stack.spacing = .space * 3
+        stack.spacing = .space
         stack.addArrangedSubview(imageView)
         stack.addArrangedSubview(body)
         return stack
@@ -98,16 +98,31 @@ final class HeroeDetailViewController: UIViewController {
         setBindings()
         viewModel.viewDidLoad()
     }
+ 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        body.textContainerInset = UIEdgeInsets(top: 0, left: view.layoutMargins.left, bottom: 0, right: view.layoutMargins.right)
+        body.textContainerInset = UIEdgeInsets(top: .doubleSpace, left: view.layoutMargins.left, bottom: .doubleSpace, right: view.layoutMargins.right)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.horizontalSizeClass == .compact {
+            masterStack.axis = .vertical
+        }
+        if traitCollection.horizontalSizeClass == .regular {
+            masterStack.axis = .horizontal
+        }
     }
     
     // MARK: Private
     
     private func configure() {
         view.backgroundColor = #colorLiteral(red: 0.9729215994, green: 1, blue: 0.9079826302, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor.white
         
         view.addSubview(masterScroll)
         masterScroll.snp.makeConstraints { maker in
@@ -124,30 +139,25 @@ final class HeroeDetailViewController: UIViewController {
     }
     
     private func setBindings() {
-        viewModel.card
-            .map { $0.url }
+        viewModel.cover
             .subscribe(onNext: { [unowned self] url in
                 self.imageView.kf.setImage(with: url)
             })
             .disposed(by: bag)
-        viewModel.card
-            .map { $0.name }
+        viewModel.title
             .bind(to: nameLabel.rx.text)
             .disposed(by: bag)
-        viewModel.card
-            .map { $0.about }
-            .debug()
-            .bind(to: body.rx.text)
+        viewModel.about
+            .bind(to: body.rx.attributedText)
+            .disposed(by: bag)
+        viewModel.isLoading
+            .bind(to: rx.isLoading)
             .disposed(by: bag)
     }
 }
 
-extension CGFloat {
-    static var space: CGFloat {
-        12
-    }
-    
-    static var doubleSpace: CGFloat {
-        24
+extension HeroeDetailViewController: ControllerWithCustomBar {
+    var navigationBarStyle: NavigationBarStyle {
+        .transparent
     }
 }

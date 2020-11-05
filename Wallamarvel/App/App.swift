@@ -37,7 +37,7 @@ final class App {
     
     func appDidLaunch() {
         let landingVC = viewControllerFactory.makeHeroesController()
-        let landingNC = UINavigationController(rootViewController: landingVC)
+        let landingNC = NavigationController(rootViewController: landingVC)
         window.rootViewController = landingNC
     }
 }
@@ -54,8 +54,12 @@ fileprivate extension Bundle {
     }
 }
 
-fileprivate extension ProcessInfo {
+extension ProcessInfo {
     var isAPICallsDebugging: Bool {
         environment["API_CALLS_DEBUG"] == "enable"
+    }
+    
+    var isMemoryDeallocDebugging: Bool {
+        environment["MEMORY_DEALLOC_DEBUG"] == "enable"
     }
 }

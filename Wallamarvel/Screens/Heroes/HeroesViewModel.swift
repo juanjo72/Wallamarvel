@@ -23,7 +23,7 @@ final class HeroesViewModel {
     // MARK: Observables
     
     let cards = PublishRelay<[HeroeCard]>()
-    let isLoading = BehaviorRelay<Bool>(value: false)
+    let isLoading = PublishRelay<Bool>()
     
     // MARK: Private
     
@@ -35,6 +35,12 @@ final class HeroesViewModel {
     private let bag = DisposeBag()
     
     // MARK: Lifecycle
+    
+    deinit {
+        if ProcessInfo.processInfo.isMemoryDeallocDebugging {
+            print("😍 deinit " + String(describing: self))
+        }
+    }
     
     init(repo: HeroesRepository) {
         self.repo = repo
@@ -87,6 +93,7 @@ final class HeroesViewModel {
     
     private func setPresentaionLogic() {
         allHeroes
+            .skip(1)
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .map { $0.sorted { $0.name < $1.name }}

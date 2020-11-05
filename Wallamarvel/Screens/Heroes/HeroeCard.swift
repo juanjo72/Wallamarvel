@@ -31,6 +31,12 @@ extension HeroeCard: RxDataSources.IdentifiableType {
     }
 }
 
+extension HeroeCard: CustomDebugStringConvertible {
+    var debugDescription: String {
+        "\(id)"
+    }
+}
+
 extension HeroeCard {
     init(heroe: Heroe) {
         self.id = heroe.id

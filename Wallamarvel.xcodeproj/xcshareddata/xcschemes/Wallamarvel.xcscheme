@@ -86,6 +86,11 @@
             value = "enable"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "MEMORY_DEALLOC_DEBUG"
+            value = "enable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction

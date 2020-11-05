@@ -11,7 +11,6 @@ import Kingfisher
 final class ImageCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = UIColor.green
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         return view

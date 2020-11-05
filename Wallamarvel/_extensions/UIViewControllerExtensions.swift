@@ -44,7 +44,7 @@ extension UIViewController {
 extension UIViewController {
     func addSpinner() {
         guard (view.subviews.compactMap { $0 as? UIActivityIndicatorView }.filter { $0.accessibilityLabel == "spinner" }).isEmpty else { return }
-        let spinner = UIActivityIndicatorView.init(style: .gray)
+        let spinner = UIActivityIndicatorView.init(style: .medium)
         spinner.startAnimating()
         spinner.accessibilityLabel = "spinner"
         view.addSubview(spinner)

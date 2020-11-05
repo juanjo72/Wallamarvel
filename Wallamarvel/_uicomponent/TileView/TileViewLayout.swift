@@ -9,7 +9,11 @@ import UIKit
 
 final class TileViewLayout: UICollectionViewLayout {
     
-    let configuration: TileViewConfiguration
+    var numColumns: Int {
+        didSet {
+            invalidateLayout()
+        }
+    }
     
     override var collectionViewContentSize: CGSize {
         guard let _ = collectionView else { return .zero }
@@ -17,7 +21,7 @@ final class TileViewLayout: UICollectionViewLayout {
     }
     
     var tileSize: CGSize {
-        let side: CGFloat = (collectionView?.bounds.width ?? 0) / CGFloat(configuration.numColumns)
+        let side: CGFloat = (collectionView?.bounds.width ?? 0) / CGFloat(numColumns)
         return CGSize(width: side, height: side)
     }
     
@@ -25,8 +29,8 @@ final class TileViewLayout: UICollectionViewLayout {
     private var totalHeight: CGFloat = 0
     private var totalWidth: CGFloat = 0
     
-    init(configuration: TileViewConfiguration) {
-        self.configuration = configuration
+    init(numColumns: Int) {
+        self.numColumns = numColumns
         super.init()
     }
     
@@ -41,6 +45,7 @@ final class TileViewLayout: UICollectionViewLayout {
         guard numberOfItems > 0 else { return }
         cache.removeAll()
         totalHeight = 0
+        totalWidth = 0
         var posX: CGFloat = 0
         for index in 0..<numberOfItems {
             let eachIndexPath = IndexPath(row: index, section: 0)
@@ -49,7 +54,7 @@ final class TileViewLayout: UICollectionViewLayout {
             posX += tileSize.width
             totalWidth = max(posX, totalWidth)
             cache.append(attributes)
-            if (index + 1) % configuration.numColumns == 0 {
+            if (index + 1) % numColumns == 0 {
                 totalHeight += tileSize.height
                 posX = 0
             }

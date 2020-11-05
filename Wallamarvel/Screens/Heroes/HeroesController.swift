@@ -20,8 +20,7 @@ final class HeroesController: UIViewController {
     // MARK: UI
     
     lazy var tileView: TileView<HeroeCard> = {
-        let configuration = TileViewConfiguration(numColumns: 2)
-        let view = TileView<HeroeCard>(configuration: configuration)
+        let view = TileView<HeroeCard>(numColumns: numColumns)
         view.didSelectItem = { [unowned self] item in
             self.viewModel.didSelect(item: item)
         }
@@ -42,6 +41,10 @@ final class HeroesController: UIViewController {
     }()
     
     // MARK: Private
+    
+    private var numColumns: Int {
+        traitCollection.horizontalSizeClass == .regular ? 4 : 2
+    }
     
     private let bag = DisposeBag()
     
@@ -66,13 +69,18 @@ final class HeroesController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        tileView.layout.numColumns = numColumns
+    }
+    
     // MARK: Private
     
     private func configuration() {
         view.backgroundColor = UIColor.white
+        navigationItem.title = "Marvel Heroes"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        definesPresentationContext = true
         
         view.addSubview(tileView)
         tileView.snp.makeConstraints { maker in
@@ -82,11 +90,19 @@ final class HeroesController: UIViewController {
     
     private func setBindings() {
         viewModel.cards
+//            .debug("cards")
             .bind(to: tileView.rx.cards)
             .disposed(by: bag)
         viewModel.isLoading
+//            .debug("isLoading")
             .bind(to: rx.isLoading)
             .disposed(by: bag)
+    }
+}
+
+extension HeroesController: ControllerWithCustomBar {
+    var navigationBarStyle: NavigationBarStyle {
+        .opaque
     }
 }
 

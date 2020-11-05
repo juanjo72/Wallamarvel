@@ -18,8 +18,7 @@ final class SearchController: UIViewController, UISearchResultsUpdating {
     // MARK: UI
     
     lazy var tileView: TileView<HeroeCard> = {
-        let configuration = TileViewConfiguration(numColumns: 1)
-        let view = TileView<HeroeCard>(configuration: configuration)
+        let view = TileView<HeroeCard>(numColumns: numColumns)
         view.didSelectItem = { [unowned self] item in
             self.viewModel.didSelect(item: item)
         }
@@ -28,6 +27,10 @@ final class SearchController: UIViewController, UISearchResultsUpdating {
         }
         return view
     }()
+    
+    private var numColumns: Int {
+        traitCollection.horizontalSizeClass == .compact ? 1 : 2
+    }
     
     private let bag = DisposeBag()
     
@@ -49,6 +52,11 @@ final class SearchController: UIViewController, UISearchResultsUpdating {
         configure()
         setBindings()
         viewModel.viewDidLoad()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        tileView.layout.numColumns = numColumns
     }
     
     // MARK: Private
