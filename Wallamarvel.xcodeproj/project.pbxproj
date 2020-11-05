@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0EBEE75579324084341D2A61 /* Pods_Wallamarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E351757AB1101F207762E /* Pods_Wallamarvel.framework */; };
+		814ED7482552B9CD00CB9443 /* HeroeDatailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED7472552B9CD00CB9443 /* HeroeDatailRepository.swift */; };
+		814ED74F2552BB2D00CB9443 /* HeroeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED74E2552BB2D00CB9443 /* HeroeDetailViewModel.swift */; };
+		814ED75B2552BDA700CB9443 /* HeroeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED75A2552BDA700CB9443 /* HeroeDetailViewController.swift */; };
+		814ED7672552BE2C00CB9443 /* HeroeDetailControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED7662552BE2C00CB9443 /* HeroeDetailControllerFactory.swift */; };
 		81991EE725519E2300C786AB /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991EE625519E2300C786AB /* TileView.swift */; };
 		81991EFE25519F4800C786AB /* AnimatableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991EFD25519F4800C786AB /* AnimatableSection.swift */; };
 		81991F0A2551A05000C786AB /* CollectionViewCellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81991F092551A05000C786AB /* CollectionViewCellDescriptor.swift */; };
@@ -125,6 +129,10 @@
 		453E351757AB1101F207762E /* Pods_Wallamarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallamarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6834F9339747E09663ACE6BB /* Pods-WallamarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallamarvelTests.release.xcconfig"; path = "Target Support Files/Pods-WallamarvelTests/Pods-WallamarvelTests.release.xcconfig"; sourceTree = "<group>"; };
 		69E20231184E04CAA6F93497 /* Pods_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814ED7472552B9CD00CB9443 /* HeroeDatailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDatailRepository.swift; sourceTree = "<group>"; };
+		814ED74E2552BB2D00CB9443 /* HeroeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewModel.swift; sourceTree = "<group>"; };
+		814ED75A2552BDA700CB9443 /* HeroeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewController.swift; sourceTree = "<group>"; };
+		814ED7662552BE2C00CB9443 /* HeroeDetailControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailControllerFactory.swift; sourceTree = "<group>"; };
 		81991EE625519E2300C786AB /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		81991EFD25519F4800C786AB /* AnimatableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSection.swift; sourceTree = "<group>"; };
 		81991F092551A05000C786AB /* CollectionViewCellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellDescriptor.swift; sourceTree = "<group>"; };
@@ -243,11 +251,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		814ED7412552B8A800CB9443 /* Heroe Detail */ = {
+			isa = PBXGroup;
+			children = (
+				814ED75A2552BDA700CB9443 /* HeroeDetailViewController.swift */,
+				814ED74E2552BB2D00CB9443 /* HeroeDetailViewModel.swift */,
+				814ED7472552B9CD00CB9443 /* HeroeDatailRepository.swift */,
+				814ED7662552BE2C00CB9443 /* HeroeDetailControllerFactory.swift */,
+			);
+			path = "Heroe Detail";
+			sourceTree = "<group>";
+		};
 		81991EE525519DF200C786AB /* _uicomponent */ = {
 			isa = PBXGroup;
 			children = (
 				81991FCB2551E48900C786AB /* TileView */,
-				81991FAB2551E0FD00C786AB /* UIViewControllerExtensions.swift */,
 				81991FB22551E14200C786AB /* DropDownView.swift */,
 			);
 			path = _uicomponent;
@@ -299,7 +317,8 @@
 				81E99B3F25510E6200FF0015 /* App */,
 				81E99B4A255112C400FF0015 /* Screens */,
 				81991EE525519DF200C786AB /* _uicomponent */,
-				81E99AFC255107B200FF0015 /* Configurations */,
+				81D7C0582552909500097F27 /* _extensions */,
+				81E99AFC255107B200FF0015 /* _configuraions */,
 				81A20DB02551054E003BBEBC /* Assets.xcassets */,
 				81A20DB22551054E003BBEBC /* LaunchScreen.storyboard */,
 				81A20DB52551054E003BBEBC /* Info.plist */,
@@ -326,13 +345,21 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		81E99AFC255107B200FF0015 /* Configurations */ = {
+		81D7C0582552909500097F27 /* _extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81991FAB2551E0FD00C786AB /* UIViewControllerExtensions.swift */,
+			);
+			path = _extensions;
+			sourceTree = "<group>";
+		};
+		81E99AFC255107B200FF0015 /* _configuraions */ = {
 			isa = PBXGroup;
 			children = (
 				81E99AFD255107D400FF0015 /* debug.xcconfig */,
 				81E99AFE255107E500FF0015 /* release.xcconfig */,
 			);
-			path = Configurations;
+			path = _configuraions;
 			sourceTree = "<group>";
 		};
 		81E99B0925510AF400FF0015 /* API */ = {
@@ -373,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				81E99B4B255112DA00FF0015 /* Heroes */,
+				814ED7412552B8A800CB9443 /* Heroe Detail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -757,15 +785,19 @@
 				81FD539A255172A300534B8F /* HeroesViewModel.swift in Sources */,
 				81E99B4D255112F600FF0015 /* HeroesControllerFactory.swift in Sources */,
 				81991F652551B70100C786AB /* TileViewLayout.swift in Sources */,
+				814ED7672552BE2C00CB9443 /* HeroeDetailControllerFactory.swift in Sources */,
+				814ED74F2552BB2D00CB9443 /* HeroeDetailViewModel.swift in Sources */,
 				81FD54002551788C00534B8F /* HeroesController.swift in Sources */,
 				81E99B6F25511F8600FF0015 /* API+SlimGateway.swift in Sources */,
 				81991FB32551E14200C786AB /* DropDownView.swift in Sources */,
+				814ED75B2552BDA700CB9443 /* HeroeDetailViewController.swift in Sources */,
 				81D7BFFC2552663600097F27 /* SearchViewModel.swift in Sources */,
 				81991EE725519E2300C786AB /* TileView.swift in Sources */,
 				81E99B462551102D00FF0015 /* ViewControllerFactory.swift in Sources */,
 				81991FAC2551E0FD00C786AB /* UIViewControllerExtensions.swift in Sources */,
 				81D7BFF025525FB900097F27 /* SearchController.swift in Sources */,
 				81E99B4125510E7100FF0015 /* App.swift in Sources */,
+				814ED7482552B9CD00CB9443 /* HeroeDatailRepository.swift in Sources */,
 				81A20DA82551054C003BBEBC /* AppDelegate.swift in Sources */,
 				81991F0A2551A05000C786AB /* CollectionViewCellDescriptor.swift in Sources */,
 				81FD53A6255176DD00534B8F /* HeroeCard.swift in Sources */,

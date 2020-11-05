@@ -7,7 +7,7 @@
 
 import API
 
-final class ViewFactoryController {
+final class ViewControllerFactory {
     
     unowned var api: API
     

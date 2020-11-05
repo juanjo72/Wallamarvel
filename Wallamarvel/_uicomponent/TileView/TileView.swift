@@ -108,6 +108,10 @@ final class TileView<Item: TileViewRepresantable>: UIView {
         return CGSize(width: layout.collectionViewContentSize.width, height: UIView.noIntrinsicMetric)
     }
     
+    override func safeAreaInsetsDidChange() {
+        super.safeAreaInsetsDidChange()
+    }
+    
     // MARK: Private
     
     private func configure() {

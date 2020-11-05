@@ -23,8 +23,8 @@ final class App {
         return API(gateway: gateway, credentials: credentials)
     }()
     
-    lazy var viewControllerFactory: ViewFactoryController = {
-        ViewFactoryController(api: api)
+    lazy var viewControllerFactory: ViewControllerFactory = {
+        ViewControllerFactory(api: api)
     }()
     
     // MARK: Lifecycle
