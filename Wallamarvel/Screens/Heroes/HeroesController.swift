@@ -69,6 +69,13 @@ final class HeroesController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tileView.collectionView.indexPathsForSelectedItems?.forEach {
+            tileView.collectionView.deselectItem(at: $0, animated: true)
+        }
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         tileView.layout.numColumns = numColumns
@@ -90,11 +97,9 @@ final class HeroesController: UIViewController {
     
     private func setBindings() {
         viewModel.cards
-//            .debug("cards")
             .bind(to: tileView.rx.cards)
             .disposed(by: bag)
         viewModel.isLoading
-//            .debug("isLoading")
             .bind(to: rx.isLoading)
             .disposed(by: bag)
     }
@@ -110,6 +115,17 @@ extension Reactive where Base == TileView<HeroeCard> {
     var cards: Binder<[HeroeCard]> {
         Binder(base) { view, items in
             view.items = items
+        }
+    }
+}
+
+extension HeroesController: ImageTransitionController {
+    var transitionImageView: UIImageView? {
+        if let selected = tileView.collectionView.indexPathsForSelectedItems?.first,
+           let cell = tileView.collectionView.cellForItem(at: selected) as? ImageCell {
+            return cell.imageView
+        } else {
+            return resultsController.transitionImageView
         }
     }
 }

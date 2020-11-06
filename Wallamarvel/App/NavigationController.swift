@@ -9,6 +9,8 @@ import UIKit
 
 final class NavigationController: UINavigationController {
     
+    var customTransitions = [ScreenTransition]()
+    
     // MARK: Lifecycle
     
     override init(rootViewController: UIViewController) {
@@ -41,12 +43,10 @@ extension NavigationController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if let customBarVC = viewController as? ControllerWithCustomBar {
             navigationController.navigationBar.standardAppearance = customBarVC.navigationBarStyle.appereance
-            setNeedsStatusBarAppearanceUpdate()
         }
     }
     
-    override func transition(from fromViewController: UIViewController, to toViewController: UIViewController, duration: TimeInterval, options: UIView.AnimationOptions = [], animations: (() -> Void)?, completion: ((Bool) -> Void)? = nil) {
-        print(fromViewController)
-        print(toViewController)
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        customTransitions.first { $0.from === type(of: fromVC) && $0.to === type(of: toVC) && $0.type == operation }?.transition
     }
 }

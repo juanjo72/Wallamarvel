@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         App(window: window!)
     }()
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // early exit if running tests
         guard !application.isTesting else {
@@ -32,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
+
+
 
 fileprivate extension UIApplication {
      var isTesting: Bool {

@@ -2,6 +2,8 @@
 //  SlimGateway+API.swift
 //  Wallamarvel
 //
+//  Adapters bridging API & Gateway frameworks
+//
 //  Created by Juanjo García Villaescusa on 03/11/2020.
 //
 

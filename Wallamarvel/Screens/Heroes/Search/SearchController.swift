@@ -84,3 +84,11 @@ final class SearchController: UIViewController, UISearchResultsUpdating {
         viewModel.userDidType(search: search)
     }
 }
+
+extension SearchController: ImageTransitionController {
+    var transitionImageView: UIImageView? {
+        guard let selected = tileView.collectionView.indexPathsForSelectedItems?.first,
+              let cell = tileView.collectionView.cellForItem(at: selected) as? ImageCell else { return nil }
+        return cell.imageView
+    }
+}

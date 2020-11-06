@@ -17,9 +17,9 @@ final class App {
     // MARK: Components
     
     lazy var api: API = {
-        let credentials = Credentials(publicKey: Bundle.main.publicKey, privateKey: Bundle.main.privateKey)
         let gateway = SlimGateway()
         gateway.debug = ProcessInfo.processInfo.isAPICallsDebugging
+        let credentials = Credentials.apiCredentials
         return API(gateway: gateway, credentials: credentials)
     }()
     
@@ -38,11 +38,19 @@ final class App {
     func appDidLaunch() {
         let landingVC = viewControllerFactory.makeHeroesController()
         let landingNC = NavigationController(rootViewController: landingVC)
+        landingNC.customTransitions.append(ScreenTransition.detailPush)
+        landingNC.customTransitions.append(ScreenTransition.detailPop)
         window.rootViewController = landingNC
     }
 }
 
 
+
+fileprivate extension Credentials {
+    static var apiCredentials: Credentials {
+        Credentials(publicKey: Bundle.main.publicKey, privateKey: Bundle.main.privateKey)
+    }
+}
 
 fileprivate extension Bundle {
     var publicKey: String {
@@ -51,15 +59,5 @@ fileprivate extension Bundle {
     
     var privateKey: String {
         infoDictionary?["APIMarvelPrivateKey"] as! String
-    }
-}
-
-extension ProcessInfo {
-    var isAPICallsDebugging: Bool {
-        environment["API_CALLS_DEBUG"] == "enable"
-    }
-    
-    var isMemoryDeallocDebugging: Bool {
-        environment["MEMORY_DEALLOC_DEBUG"] == "enable"
     }
 }

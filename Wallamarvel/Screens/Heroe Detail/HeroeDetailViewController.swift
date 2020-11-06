@@ -161,3 +161,9 @@ extension HeroeDetailViewController: ControllerWithCustomBar {
         .transparent
     }
 }
+
+extension HeroeDetailViewController: ImageTransitionController {
+    var transitionImageView: UIImageView? {
+        imageView
+    }
+}
