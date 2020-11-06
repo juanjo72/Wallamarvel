@@ -42,7 +42,7 @@ final class HeroesViewModel {
         }
     }
     
-    init(repo: HeroesRepository) {
+    init(repo: HeroesRepositoryType) {
         self.repo = repo
     }
     
