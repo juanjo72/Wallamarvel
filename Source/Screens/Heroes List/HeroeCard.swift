@@ -47,9 +47,7 @@ extension HeroeCard {
 extension HeroeCard: CollectionViewCellDescriptable {
     var cellDescriptor: CollectionViewCellDescriptor {
         CollectionViewCellDescriptor(reuseIdentifier: "cell") { (cell: ImageCell) in
-            cell.imageView.kf.setImage(with: url, placeholder: nil, options: [.waitForCache], progressBlock: nil) { result, error, type, url  in
-                print(result)
-            }
+            cell.imageView.kf.setImage(with: url)
         }
     }
 }
