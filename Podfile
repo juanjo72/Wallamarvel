@@ -17,6 +17,13 @@ target 'Wallamarvel' do
     pod 'Quick'
     pod 'Nimble'
     pod 'RxBlocking'
+    pod 'iOSSnapshotTestCase'
+    pod 'Nimble-Snapshots'
+  end
+
+  target 'WallamarvelUITests' do
+    inherit! :search_paths
+    pod 'iOSSnapshotTestCase'
   end
 end
 

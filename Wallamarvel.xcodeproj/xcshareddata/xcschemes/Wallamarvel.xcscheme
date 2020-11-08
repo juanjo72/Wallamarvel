@@ -58,6 +58,16 @@
                ReferencedContainer = "container:Wallamarvel.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "814252182555D5DC00E451A4"
+               BuildableName = "WallamarvelUITests.xctest"
+               BlueprintName = "WallamarvelUITests"
+               ReferencedContainer = "container:Wallamarvel.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
