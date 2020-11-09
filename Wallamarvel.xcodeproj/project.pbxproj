@@ -423,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				81E99B4B255112DA00FF0015 /* Heroes List */,
+				81D7C022255277F200097F27 /* Search */,
 				814ED7412552B8A800CB9443 /* Hero Detail */,
 			);
 			path = Screens;
@@ -437,7 +438,6 @@
 				81E99B4C255112F600FF0015 /* HeroesControllerFactory.swift */,
 				81FD53A5255176DC00534B8F /* HeroeCard.swift */,
 				81991F702551B9A500C786AB /* ImageCell.swift */,
-				81D7C022255277F200097F27 /* Search */,
 			);
 			path = "Heroes List";
 			sourceTree = "<group>";

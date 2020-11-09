@@ -8,6 +8,7 @@
 import SnapKit
 import RxSwift
 import RxCocoa
+import RxKeyboard
 
 final class SearchController: UIViewController, UISearchResultsUpdating {
     
@@ -76,6 +77,13 @@ final class SearchController: UIViewController, UISearchResultsUpdating {
             .disposed(by: bag)
         viewModel.isLoading
             .bind(to: rx.isLoading)
+            .disposed(by: bag)
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [unowned self] keyboardVisibleHeight in
+                var customInsets = self.additionalSafeAreaInsets
+                customInsets.bottom = keyboardVisibleHeight - (self.view.window?.safeAreaInsets.bottom ?? 0)
+                self.additionalSafeAreaInsets = customInsets
+            })
             .disposed(by: bag)
     }
     
